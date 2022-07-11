@@ -10,6 +10,7 @@ describe("test", () => {
             jest.advanceTimersByTime(1);
             fail("should never come here");
         } catch (e) {
+            console.warn(e);
             expect(e.stack).toContain("namedHandlerFn");
         }
     });
